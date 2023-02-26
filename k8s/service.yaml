@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: gocd
-  name: gocd
+  name: gitops-argocd
 spec:
   selector:
-    app: gocd
+    app: gitops-argocd
   ports:
   - port: 5050
     targetPort: 5050

@@ -1,2 +1,2 @@
-# gocd-test
-GOCD Teste
+# ArgoCD Teste
+ArgoCD Teste

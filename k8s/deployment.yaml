@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: gocd
-  name: gocd
+  name: gitops-argocd
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: gocd
+      app: gitops-argocd
   template:
     metadata:
       labels:
-        app: gocd
+        app: gitops-argocd
     spec:
       containers:
-      - name: gocd
-        image: chmenegatti/gocd-test:latest
+      - name: gitops-argocd
+        image: chmenegatti/gitops-argocd:latest
         ports:
         - containerPort: 5050
